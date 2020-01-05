@@ -39,7 +39,7 @@ export class FileComponent implements OnInit, OnDestroy {
 
   public replaceWordWithSynonym(synonym: string) {
     let text = this.textService.getText();
-    const selectionText = this.textService.getSelectionText();
+    const selectionText = this.textService.getSelectionText().trim();
     text = text.replace(selectionText, synonym);
     this.textService.updateText(text);
   }
