@@ -44,6 +44,13 @@ export class FileComponent implements OnInit, OnDestroy {
     this.textService.updateText(text);
   }
 
+  public onTab(event: KeyboardEvent) {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      document.execCommand('insertHTML', false, '&emsp;');
+    }
+  }
+
   ngOnDestroy(): void {
     this.onDestroy$.next();
     this.onDestroy$.complete();

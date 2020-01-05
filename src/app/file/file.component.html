@@ -2,5 +2,6 @@
      [innerHTML]="text$ | async"
      contenteditable="true"
      (mouseup)="onMouseUp($event)"
+     (keydown)="onTab($event)"
      (input)="onEditorInput($event)">
 </div>
