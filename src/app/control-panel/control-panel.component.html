@@ -1,5 +1,9 @@
 <div class="format-actions">
-  <button class="format-action" type="button"><b>B</b></button>
-  <button class="format-action" type="button"><i>I</i></button>
-  <button class="format-action" type="button"><u>U</u></button>
+  <button class="format-action" type="button" (click)="applyStyling('bold')"><b>B</b></button>
+  <button class="format-action" type="button" (click)="applyStyling('italic')"><i>I</i></button>
+  <button class="format-action" type="button" (click)="applyStyling('underline')"><u>U</u></button>
+  <label class="format-action">
+    Choose color
+    <input  type="color" (change)="onColorChange($event)"/>
+  </label>
 </div>

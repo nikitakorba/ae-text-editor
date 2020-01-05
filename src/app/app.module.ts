@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { TextService } from './text-service/text.service';
 import { FooterComponent } from './footer/footer.component';
+import {HttpClientModule} from '@angular/common/http';
+import {SynonymFinder} from './synonym-finder-service/synonym-finder.service';
+import { SynonimFinderComponent } from './synonim-finder/synonim-finder.component';
 
 @NgModule({
   declarations: [
@@ -14,14 +17,17 @@ import { FooterComponent } from './footer/footer.component';
     FileComponent,
     ControlPanelComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SynonimFinderComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [
-    TextService
+    TextService,
+    SynonymFinder
   ],
   bootstrap: [
     AppComponent

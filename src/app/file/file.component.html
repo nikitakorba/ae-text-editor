@@ -1,3 +1,6 @@
-<div class="file">
-  {{text$ | async}}
+<div class="file"
+     [innerHTML]="text$ | async"
+     contenteditable="true"
+     (mouseup)="onMouseUp($event)"
+     (input)="onEditorInput($event)">
 </div>

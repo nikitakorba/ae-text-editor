@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+.synonim-finder {
+  width: 640px;
+  padding: 10px 0;
+  display: flex;
+}
+.synonim-list {
+  width: 200px;
+  li {
+    &:hover {
+      cursor: pointer;
+      background: yellow;
+    }
+  }
+}
+
+.synonim-clear {
+  height: 30px;
+  width: 70px;
+  position: relative;
+  right: 30px;
+  top: 10px;
+}
+
+.message {
+  padding: 10px;
+}

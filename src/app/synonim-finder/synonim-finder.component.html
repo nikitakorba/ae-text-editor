@@ -1,0 +1,16 @@
+<div class="synonim-finder" *ngIf="synonyms.length; else message">
+  Synonims list:
+  <ul class="synonim-list">
+    <ng-container *ngFor="let synonym of synonyms">
+      <li (click)="onSelect(synonym.word)">
+        {{synonym.word}}
+      </li>
+    </ng-container>
+  </ul>
+</div>
+<button class="synonim-clear" *ngIf="synonyms.length" (click)="clear()">Clear list</button>
+<ng-template #message>
+  <span class="message">
+  Select a word to see the synonyms
+  </span>
+</ng-template>
